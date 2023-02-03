@@ -11,7 +11,7 @@ class GenresService():
         result = self.db.query(GenresModel).all()
         return result
     
-    def get_genres(self, id:int):
+    def get_genres_by_id(self, id:int):
         result = self.db.query(GenresModel).filter(GenresModel.id == id).first()
         return result
     

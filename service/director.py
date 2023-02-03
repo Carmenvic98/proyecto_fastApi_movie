@@ -6,11 +6,11 @@ class DirectorService():
     def __init__(self,db) -> None:
         self.db = db
 
-    def get_director(self):
+    def get_directors(self):
         result = self.db.query(DirectorModel).all()
         return result
     
-    def get_director(self, fname:str):
+    def get_director_by_fname(self, fname:str):
         result = self.db.query(DirectorModel).filter(DirectorModel.fname == fname).first()
         return result
     
